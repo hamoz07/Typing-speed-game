@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./typing-speed-test-game.css">
+    <title>Typing Speed Test Game</title>
+</head>
+
+<body>
+    <div class="game">
+        <div class="name">Typing Speed Test Game</div>
+        <div class="container">
+            <div class="flex_control">
+                <div class="message">
+                    You Are Playing On
+                    <span class="lvl">Easy</span> Level
+                    & You Have <span class="seconds">7</span> Seconds To Type The Word
+                </div>
+                <div class="select-container">
+                    <select name="" id="">
+                        <option value="">select level</option>
+                        <option value="Easy" >Easy</option>
+                        <option value="Hard">Hard</option>
+                        <option value="Normal">Normal</option>
+                    </select>
+                </div>
+            </div>
+            <div class="start">Start Playing</div>
+            <div class="the-word"></div>
+            <input type="text" class="input" />
+            <div class="upcoming-words">Words Will Show Here</div>
+            <div class="control">
+                <div class="time">Time Left: <span>7</span> Seconds</div>
+                <div>Note: Easy is the Default Level</div>
+                <div class="score">
+                    Score: <span class="got">0</span> From <span class="total">20</span>
+                </div>
+            </div>
+            <div class="finish"><div class="correctWord" style="color: green;font-size: 20px;"></div></div>
+        </div>
+    </div>
+    <script src="./typing-speed-test-game.js"></script>
+</body>
+
+</html>

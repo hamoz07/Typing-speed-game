@@ -92,7 +92,7 @@ const levels = {
 // Words for each difficulty level
 const easyWords = rankedWords.slice(0, 20);
 const normalWords = rankedWords.slice(21, 50);
-const hardWords = rankedWords.slice(51, 52);
+const hardWords = rankedWords.slice(51, 76);
 
 
 
@@ -249,11 +249,21 @@ function gameOver() {
   main_input.value = "";
   document.getElementsByClassName("correctWord")[0].remove();
   const gameOverDiv = document.createElement("div");
+  const tryAgainBtn = document.createElement("button");
   const gameOverMsg = document.createTextNode(
     `Game Over, ${document.getElementsByClassName("score")[0].textContent}`
   );
-  gameOverDiv.className = "bad";
+  const tryAgainBtnTxt = document.createTextNode(
+    "try again"
+  );
+  
+  gameOverDiv.className = "bad flex-data";
+  tryAgainBtn.addEventListener("click",()=>{
+    location.reload()
+  });
   gameOverDiv.appendChild(gameOverMsg);
+  tryAgainBtn.appendChild(tryAgainBtnTxt);
+  gameOverDiv.prepend(tryAgainBtn)
   finish.appendChild(gameOverDiv);
 }
 
